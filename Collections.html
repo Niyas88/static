@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Collections - Velora</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>Velora</h1>
+</header>
+
+<div class="container">
+    <h2 class="page-title">Collections</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/Gold Ring.jpg') }}" width="200">
+            <h3>Gold Ring</h3>
+            <p>₹499</p>
+            <button onclick="addToCart('Gold Ring', 499)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/diamond ring.jpg') }}" width="200">
+            <h3>Diamond Ring</h3>
+            <p>₹699</p>
+            <button onclick="addToCart('Diamond Ring', 699)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/Stud Earring.jpg') }}" width="200">
+            <h3>Stud Earrings</h3>
+            <p>₹599</p>
+            <button onclick="addToCart('Stud Earrings', 599)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/Hoop Earring.jpg') }}" width="200">
+            <h3>Hoop Earrings</h3>
+            <p>₹399</p>
+            <button onclick="addToCart('Hoop Earrings', 399)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/Gold Necklace.jpg') }}" width="200">
+            <h3>Gold Necklace</h3>
+            <p>₹499</p>
+            <button onclick="addToCart('Gold Necklace', 499)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/watch.jpg') }}" width="200">
+            <h3>Watch</h3>
+            <p>₹1999</p>
+            <button onclick="addToCart('Watch', 1999)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/Silver Anklet.jpg') }}" height="200">
+            <h3>Silver Anklet</h3>
+            <p>₹399</p>
+            <button onclick="addToCart('Silver Anklet', 399)">Add to Cart</button>
+        </div>
+
+    </div>
+</div>
+
+<!-- ✅ SCRIPT MUST BE HERE -->
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

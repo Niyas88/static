@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velora Accessories</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #faf7f5;
+            color: #333;
+        }
+
+        header {
+            background: #fff;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            color: #b89b72;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #b89b72;
+        }
+
+        .hero {
+            height: 80vh;
+            background: url('https://images.unsplash.com/photo-1602751584552-8ba73aad10e1') no-repeat center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            background: rgba(0,0,0,0.4);
+            padding: 20px;
+        }
+
+        .section {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-family: 'Playfair Display', serif;
+            color: #b89b72;
+            margin-bottom: 50px;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+        }
+
+       .card {
+            background: #fff;
+            border-radius: 50px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: 0.3s;
+            max-width: 250px;
+            margin: auto;
+            padding: 150px;  
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            margin: 10px 0;
+        }
+
+        .card p {
+            color: #b89b72;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #494949;
+            color: #aaa;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Velora</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="Collections">Collections</a>
+        <a href="Cart">Cart</a>
+        <a href="Wishlist">Wishlist</a>
+        <a href="Payment">Payment</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Timeless Beauty in Every Piece</h2>
+</section>
+
+<section class="section" id="Rings">
+    <h2>Rings</h2>
+    <div class="products">
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/Gold Ring.jpg') }}">
+            <h3>Gold Ring</h3>
+            <p>₹499</p>
+            <button onclick="addToCart('Gold Ring', 499)">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/diamond ring.jpg') }}">
+            <h3>Diamond Ring</h3>
+            <p>₹699</p>
+            <button onclick="addToCart('Diamond Ring', 699)">Add to Cart</button>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="Earrings">
+    <h2>Earrings</h2>
+    <div class="products">
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/Stud Earring.jpg') }}">
+            <h3>Stud Earrings</h3>
+            <p>₹599</p>
+            <button onclick="addToCart('Stud Earrings', 599)">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/Hoop Earring.jpg') }}">
+            <h3>Hoop Earrings</h3>
+            <p>₹399</p>
+            <button onclick="addToCart('Hoop Earrings', 399)">Add to Cart</button>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="Necklaces">
+    <h2>Necklaces</h2>
+    <div class="products">
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/Gold Necklace.jpg') }}">
+            <h3>Gold Necklace</h3>
+            <p>₹499</p>
+            <button onclick="addToCart('Gold Necklace', 499)">Add to Cart</button>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="Watches">
+    <h2>Watches</h2>
+    <div class="products">
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/watch.jpg') }}">
+            <h3>Watch</h3>
+            <p>₹1,999</p>
+            <button onclick="addToCart('Watch', 1999)">Add to Cart</button>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="Anklets">
+    <h2>Anklets</h2>
+    <div class="products">
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/Silver Anklet.jpg') }}">
+            <h3>Silver Anklet</h3>
+            <p>₹399</p>
+            <button onclick="addToCart('Silver Anklet', 399)">Add to Cart</button>
+        </div>
+    </div> <!-- 🌟 Velora Description -->
+<section class="intro">
+    <h2>Velora</h2>
+    <p>
+        Velora Accessories brings you elegant and trendy jewelry designed to enhance your everyday style. 
+        Discover rings, earrings, necklaces, and more crafted for every occasion.
+    </p>
+</section>
+
+<!-- 📦 Info Sections -->
+<section class="info-container">
+
+    <div class="info-box">
+        <h3>About Us</h3>
+        <p>We provide stylish and affordable accessories for everyone.</p>
+    </div>
+
+    <div class="info-box">
+        <h3>Contact Us</h3>
+        <p>Email: velora@email.com</p>
+        <p>Phone: +91 9876543210</p>
+    </div>
+
+    <div class="info-box">
+        <h3>Policy</h3>
+        <p>7-day return policy and secure payments.</p>
+    </div>
+
+    <div class="info-box">
+        <h3>Help</h3>
+        <p>We are here to assist you anytime.</p>
+    </div>
+
+</section>
+
+</section>
+</body>
+
+<footer>
+    <p>© 2026 Velora Accessories | Designed with ❤</p>
+</footer>
+
+</body>
+</html>
